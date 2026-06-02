@@ -4,20 +4,19 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="1" class="com.stschool.springdi.Product">
-        <!-- collaborators and configuration for this bean go here -->
+    <bean id="product1" class="com.stschool.springdi.Product">
         <property name="id" value="101"/>
         <property name="name" value="Dell Laptop"/>
         <property name="price" value="50000"/>
-        <property name="quantity" value="10"/>
-
-
+        <property name="discount" value="10"/>
     </bean>
 
-    <!--<bean id="..." class="...">
-        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;
-    </bean>-->
 
-    <!-- more bean definitions go here -->
+    <bean id = "order1" class="com.stschool.springdi.Order">
+        <property name="orderId" value="1001"/>
+        <property name="quantity" value="10"/>
+        <property name="product" ref="product1"/>
+
+    </bean>
 
 </beans>
