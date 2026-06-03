@@ -16,8 +16,8 @@ public class App
         Order order1 = context.getBean("order1" ,Order.class);
         System.out.println(order1);*/
 
-        Customer customer1 = context.getBean("customer1" , Customer.class);
-        System.out.println(customer1);
+        Customer customer = context.getBean("customer1" , Customer.class);
+        System.out.println(customer);
     }
 
 }
